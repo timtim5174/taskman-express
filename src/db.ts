@@ -5,11 +5,11 @@ import { Task } from './models/task';
 import { User } from './models/user';
 
 export default async function startDB(app: Express) {
-  const url = 'mongodb://localhost:27017';
+  const url = 'mongodb://mongo:27017/taskman';
   const options = {
     useNewUrlParser: true,
-    auth: { user: 'taskman', password: 'wifhm' },
-    authSource: 'taskman'
+    auth: { user: 'root', password: 'example' },
+    authSource: 'admin'
   };
   const client = await connectToMongoDB(url, options);
   app.locals.taskDAO = new MongoGenericDAO<Task>(client!.db('taskman'), 'tasks');
