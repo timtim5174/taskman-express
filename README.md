@@ -1,7 +1,11 @@
 # taskman-express
-Project which was covered in the 3 semester and in my tutorial 
+Project which was covered in the 3 semester and in my tutorial. This is a simple server-side web application for managing tasks.
+
+# Technologies
+Server: node.js with express
+Database: MongoDB
 
 # Requirements
-To be able to execute the program, a local running instance of MongoDB is required. Dependencies can be installed via npm install.
-To run the program execute npm start in your command line.
+Docker is required to start the application locally. To start the application execute the command `docker-compose up` in the terminal. 
 
+The application will be running on `localhost:3000`
